@@ -1,0 +1,14 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+    <div class="content-container">
+        {% for investment_account in investment_accounts %}
+        <div>
+            <h2>{{ investment_account.reference }} - {{ investment_account.account_type }}</h2>
+            <div>Wallets: {{ investment_account.wallets }}</div>
+            <div>Portfolio Values: {{ investment_account.portfolio_values }}</div>
+        </div>
+        <hr/>
+        {% endfor %}
+    </div>
+{% endblock %}
